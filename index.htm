@@ -1,168 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Be My Valentine ❤️</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<meta charset="UTF-8">
+<title>Susmita ❤️ Be My Valentine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            margin: 0;
-            height: 100vh;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-        .card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            text-align: center;
-            max-width: 350px;
-            width: 90%;
-            animation: pop 0.6s ease;
-        }
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        @keyframes pop {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #ffafbd, #ffc3a0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-        h1 {
-            color: #ff4d6d;
-            margin-bottom: 10px;
-        }
+.card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+    text-align: center;
+    width: 92%;
+    max-width: 380px;
+    animation: fadeIn 1s ease;
+    position: relative;
+}
 
-        p {
-            color: #555;
-            margin-bottom: 30px;
-        }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
 
-        .buttons {
-            position: relative;
-            height: 120px;
-        }
+h1 {
+    color: #ff3366;
+    margin-bottom: 5px;
+}
 
-        button {
-            padding: 12px 25px;
-            font-size: 16px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s ease;
-            position: absolute;
-        }
+h2 {
+    color: #ff4d6d;
+}
 
-        #yes {
-            background: #ff4d6d;
-            color: white;
-            left: 50%;
-            transform: translateX(-120%);
-        }
+p {
+    color: #555;
+    font-size: 15px;
+}
 
-        #yes:hover {
-            background: #ff1e4d;
-            transform: translateX(-120%) scale(1.1);
-        }
+.buttons {
+    position: relative;
+    height: 150px;
+    margin-top: 20px;
+}
 
-        #no {
-            background: #ccc;
-            color: #333;
-            left: 50%;
-            transform: translateX(20%);
-        }
+button {
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s ease;
+}
 
-        .hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
+#yes {
+    background: linear-gradient(135deg, #ff4d6d, #ff758c);
+    color: white;
+    left: 50%;
+    transform: translateX(-120%);
+}
 
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            animation: float 5s linear infinite;
-            opacity: 0.8;
-        }
+#yes:hover {
+    transform: translateX(-120%) scale(1.1);
+}
 
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) scale(0.5);
-                opacity: 0;
-            }
-            10% { opacity: 1; }
-            100% {
-                transform: translateY(-10vh) scale(1.2);
-                opacity: 0;
-            }
-        }
-    </style>
+#no {
+    background: #eee;
+    color: #333;
+    left: 50%;
+    transform: translateX(20%);
+}
+
+.tease {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ff4d6d;
+    min-height: 20px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.3); opacity: 0; }
+}
+
+.final {
+    animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+</style>
 </head>
+
 <body>
 
 <div class="card" id="card">
-    <h1>Hey My Love ❤️</h1>
-    <p>I've been meaning to ask you something really special...</p>
+    <h1>Hey Susmita ❤️</h1>
+    <p>I made something special… just for you 🥹</p>
     <h2>Will you be my Valentine? 💖</h2>
 
     <div class="buttons">
         <button id="yes">Yes 💘</button>
         <button id="no">No 🙈</button>
     </div>
+
+    <div class="tease" id="tease"></div>
 </div>
 
-<div class="hearts" id="hearts"></div>
+<audio id="music" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8b6b0c2f4.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-    const noBtn = document.getElementById("no");
-    const yesBtn = document.getElementById("yes");
-    const card = document.getElementById("card");
-    const heartsContainer = document.getElementById("hearts");
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+const tease = document.getElementById("tease");
+const card = document.getElementById("card");
+const music = document.getElementById("music");
 
-    function moveNoButton() {
-        const x = Math.random() * 200 - 100;
-        const y = Math.random() * 100 - 50;
-        noBtn.style.transform = `translate(${x}px, ${y}px)`;
-    }
+const teasingTexts = [
+    "Susmitaaa 😭 don't do this",
+    "No button is broken 😌",
+    "Nice try 😏",
+    "You know you want to say YES ❤️",
+    "Stop teasing me 🥹",
+    "Okay now you're just being cute 😍"
+];
 
-    noBtn.addEventListener("mouseenter", moveNoButton);
-    noBtn.addEventListener("click", moveNoButton);
+let teaseIndex = 0;
 
-    yesBtn.addEventListener("click", () => {
-        card.innerHTML = `
-            <h1>Yayyy!! 🥹❤️</h1>
-            <p>You just made me the happiest person ever!</p>
-            <h2>Happy Valentine’s Day 💕</h2>
-            <p>Can't wait to make beautiful memories with you 😘</p>
-        `;
-        startHearts();
-    });
+function moveNo() {
+    const x = Math.random() * 260 - 130;
+    const y = Math.random() * 120 - 60;
+    noBtn.style.transform = `translate(${x}px, ${y}px) scale(0.9)`;
+    tease.textContent = teasingTexts[teaseIndex % teasingTexts.length];
+    teaseIndex++;
+}
 
-    function startHearts() {
-        setInterval(() => {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.innerHTML = "❤️";
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.fontSize = Math.random() * 20 + 15 + "px";
-            heartsContainer.appendChild(heart);
+noBtn.addEventListener("mouseenter", moveNo);
+noBtn.addEventListener("click", moveNo);
 
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }, 300);
-    }
+yesBtn.addEventListener("click", () => {
+    music.play();
+    card.innerHTML = `
+        <div class="final">
+            <h1>YAYYY 🥹❤️</h1>
+            <h2>Susmita said YES 💖</h2>
+            <p>
+                You just made my heart the happiest place on earth 💕<br><br>
+                I promise to make you smile, laugh,<br>
+                and love you a little more every day 😘
+            </p>
+            <h2>Happy Valentine’s Day 💌</h2>
+        </div>
+    `;
+    heartRain();
+});
+
+function heartRain() {
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 15 + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }, 250);
+}
 </script>
 
 </body>
