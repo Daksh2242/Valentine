@@ -16,21 +16,22 @@
 body {
     margin: 0;
     height: 100vh;
-    background: radial-gradient(circle at top, #ffafbd, #ffc3a0);
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
+/* CARD */
 .card {
     background: white;
     padding: 35px 25px;
-    border-radius: 25px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+    border-radius: 26px;
+    box-shadow: 0 35px 70px rgba(0,0,0,0.25);
     text-align: center;
     width: 92%;
-    max-width: 380px;
+    max-width: 400px;
     animation: fadeIn 1s ease;
 }
 
@@ -40,7 +41,7 @@ body {
 }
 
 h1 {
-    color: #ff3366;
+    color: #ff2f68;
     margin-bottom: 5px;
 }
 
@@ -54,30 +55,11 @@ p {
     font-size: 15px;
 }
 
-.photos {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 15px 0 25px;
-}
-
-.photos img {
-    width: 110px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: 0.4s ease;
-}
-
-.photos img:hover {
-    transform: scale(1.08) rotate(-2deg);
-}
-
+/* BUTTONS */
 .buttons {
     position: relative;
     height: 150px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 button {
@@ -108,34 +90,63 @@ button {
     transform: translateX(20%);
 }
 
+/* TEASE TEXT */
 .tease {
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 14px;
     color: #ff4d6d;
     min-height: 22px;
 }
 
-.heart {
-    position: fixed;
-    bottom: -20px;
-    font-size: 20px;
-    animation: float 6s linear infinite;
-    opacity: 0.8;
-}
-
-@keyframes float {
-    0% { transform: translateY(0) scale(0.5); opacity: 0; }
-    10% { opacity: 1; }
-    100% { transform: translateY(-110vh) scale(1.3); opacity: 0; }
-}
-
+/* FINAL VIEW */
 .final {
-    animation: pop 0.6s ease;
+    animation: pop 0.7s ease;
 }
 
 @keyframes pop {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* PHOTO GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transform: rotate(-2deg);
+    transition: 0.4s ease;
+}
+
+.gallery img:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.gallery img:hover {
+    transform: scale(1.08) rotate(0deg);
+}
+
+/* HEART RAIN */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 22px;
+    animation: float 6s linear infinite;
+    opacity: 0.9;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) scale(0.6); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
 }
 </style>
 </head>
@@ -144,8 +155,7 @@ button {
 
 <div class="card" id="card">
     <h1>Hey Susmita ❤️</h1>
-    <p>I made something special… just for you 🥹</p>
-
+    <p>I made something special… only for you 🥹</p>
     <h2>Will you be my Valentine? 💖</h2>
 
     <div class="buttons">
@@ -168,12 +178,12 @@ const card = document.getElementById("card");
 const music = document.getElementById("music");
 
 const teasingTexts = [
-    "Susmitaaa 😭 pleasee",
+    "Susmitaaa 😭 don’t do this",
+    "That button is just for decoration 😌",
     "Nice try 😏",
-    "That button won’t work 😌",
-    "You’re just teasing me now 🥹",
-    "Okay you’re too cute 😍",
-    "Just say YES already ❤️"
+    "You know the answer already ❤️",
+    "Stop being this cute 🥹",
+    "Okay now click YES 💘"
 ];
 
 let teaseIndex = 0;
@@ -196,16 +206,16 @@ yesBtn.addEventListener("click", () => {
             <h1>YAYYY 🥹❤️</h1>
             <h2>Susmita said YES 💖</h2>
 
-            <div class="photos">
-                <img src="6f09d4b4-e11b-4861-ba55-b93033010f3e.jpg" alt="Us ❤️">
-                <img src="5f753509-1766-4c3b-a969-fe0107a61b6a.jpg" alt="Together 💕">
-                <img src="f6a1bcec-e2d1-4e66-8e57-4f6b88137c76.jpg" alt="Us ❤️">
-                <img src="1aef345a-87f4-4235-acf1-976b80528c26.jpg" alt="Together 💕">
+            <div class="gallery">
+                <img src="6f09d4b4-e11b-4861-ba55-b93033010f3e.jpg">
+                <img src="5f753509-1766-4c3b-a969-fe0107a61b6a.jpg">
+                <img src="f6a1bcec-e2d1-4e66-8e57-4f6b88137c76.jpg">
+                <img src="1aef345a-87f4-4235-acf1-976b80528c26.jpg">
             </div>
 
             <p>
-                These are my favorite pictures…<br>
-                because my favorite person is in them 💕<br><br>
+                Every picture, every moment…<br>
+                means everything to me 💕<br><br>
                 Happy Valentine’s Day, Susmita 😘
             </p>
         </div>
@@ -219,16 +229,14 @@ function heartRain() {
         heart.className = "heart";
         heart.innerHTML = "❤️";
         heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = Math.random() * 20 + 15 + "px";
+        heart.style.fontSize = Math.random() * 20 + 16 + "px";
         document.body.appendChild(heart);
 
         setTimeout(() => heart.remove(), 6000);
-    }, 250);
+    }, 220);
 }
 </script>
 
 </body>
 </html>
-
-
 
