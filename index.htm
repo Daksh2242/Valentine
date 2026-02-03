@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Susmita ❤️ Be My Valentine</title>
+<title>Baby ❤️ Be My Valentine</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -15,23 +15,23 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* CARD */
 .card {
     background: white;
-    padding: 35px 25px;
+    padding: 30px 22px;
     border-radius: 26px;
     box-shadow: 0 35px 70px rgba(0,0,0,0.25);
     text-align: center;
     width: 92%;
-    max-width: 400px;
+    max-width: 420px;
     animation: fadeIn 1s ease;
 }
 
@@ -59,7 +59,7 @@ p {
 .buttons {
     position: relative;
     height: 150px;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 button {
@@ -90,7 +90,7 @@ button {
     transform: translateX(20%);
 }
 
-/* TEASE TEXT */
+/* TEASE */
 .tease {
     margin-top: 12px;
     font-size: 14px;
@@ -98,7 +98,7 @@ button {
     min-height: 22px;
 }
 
-/* FINAL VIEW */
+/* FINAL */
 .final {
     animation: pop 0.7s ease;
 }
@@ -108,33 +108,28 @@ button {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* PHOTO GALLERY */
+/* GALLERY – FIXED */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 12px;
     margin: 20px 0;
 }
 
 .gallery img {
     width: 100%;
-    height: 140px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 14px;
+    border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    transform: rotate(-2deg);
     transition: 0.4s ease;
 }
 
-.gallery img:nth-child(even) {
-    transform: rotate(2deg);
-}
-
 .gallery img:hover {
-    transform: scale(1.08) rotate(0deg);
+    transform: scale(1.08);
 }
 
-/* HEART RAIN */
+/* HEARTS */
 .heart {
     position: fixed;
     bottom: -20px;
@@ -154,7 +149,7 @@ button {
 <body>
 
 <div class="card" id="card">
-    <h1>Hey Susmita ❤️</h1>
+    <h1>Hey Baby ❤️</h1>
     <p>I made something special… only for you 🥹</p>
     <h2>Will you be my Valentine? 💖</h2>
 
@@ -178,12 +173,12 @@ const card = document.getElementById("card");
 const music = document.getElementById("music");
 
 const teasingTexts = [
-    "Susmitaaa 😭 don’t do this",
-    "That button is just for decoration 😌",
+    "Babyyy 😭 don’t do this",
+    "That button is just for fun 😌",
     "Nice try 😏",
-    "You know the answer already ❤️",
+    "You already know the answer ❤️",
     "Stop being this cute 🥹",
-    "Okay now click YES 💘"
+    "Okay… click YES now 💘"
 ];
 
 let teaseIndex = 0;
@@ -204,7 +199,7 @@ yesBtn.addEventListener("click", () => {
     card.innerHTML = 
         <div class="final">
             <h1>YAYYY 🥹❤️</h1>
-            <h2>Susmita said YES 💖</h2>
+            <h2>Baby said YES 💖</h2>
 
             <div class="gallery">
                 <img src="6f09d4b4-e11b-4861-ba55-b93033010f3e.jpg">
@@ -214,9 +209,9 @@ yesBtn.addEventListener("click", () => {
             </div>
 
             <p>
-                Every picture, every moment…<br>
+                Every picture… every moment…<br>
                 means everything to me 💕<br><br>
-                Happy Valentine’s Day, Susmita 😘
+                Happy Valentine’s Day, Baby 😘
             </p>
         </div>
     ;
